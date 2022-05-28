@@ -242,15 +242,21 @@ public class AddressBookSystemUC10 {
 					int count = 0;
 					i = c.iterator();
 					i1 = c1.iterator();
+					System.out.print("Enter the Phone Number to find contact : ");
+			  		Long input = scan.nextLong();
 					while(i.hasNext()) {
 					AddressBookSystemUC10 e = i.next();
-					count++;
-					System.out.println(e);
+						if(e.getPhoneNumber() == input) {
+							count++;
+							System.out.println(e);
+						}
 					}
 					while(i1.hasNext()) {
 					AddressBookSystemUC10 e = i1.next();
-					System.out.println(e);
-					count++;
+						if(e.getPhoneNumber() == input) {
+						count++;
+						System.out.println(e);
+						}
 					}
 					System.out.println("Number of contacts : "+count);
 				break;
